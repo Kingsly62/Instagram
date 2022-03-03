@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('instagram.urls')),
-    path('instaphoto/', include('django.contrib.auth.urls')),
+    # path('instaphoto/', include('django.contrib.auth.urls')),
 
     path('admin/', admin.site.urls),
 
