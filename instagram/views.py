@@ -26,11 +26,13 @@ def home(request):
     return render(request, 'home.html')
 
 
+@login_required
 def contact(request):
 
     return render(request, ' contact.html')
 
 
+@login_required
 def adventure(request):
     return render(request, 'adventure.html')
 
@@ -73,5 +75,6 @@ def login_view(request):
     return render(request, "login.html", context)
 
 
+@login_required
 def ocean(request):
     return render(request, 'ocean.html')
