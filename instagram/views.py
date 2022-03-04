@@ -6,6 +6,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+
 
 from .models import *
 from django.contrib.auth.decorators import login_required
@@ -17,6 +20,8 @@ from django.contrib.auth import (
 )
 
 from .forms import UserLoginForm, UserRegisterForm
+
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -78,3 +83,23 @@ def login_view(request):
 @login_required
 def ocean(request):
     return render(request, 'ocean.html')
+
+
+def send_gmail(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        print(name, subject, message)
+
+        send_mail(
+            subject,
+            message,
+            'from@mail.com',
+            ['to@mail.com'],
+            fail_silently=False,
+        )
+
+        return HttpResponseRedirect(reverse('ocean'))
+    else:
+        return HttpResponse('Invalid request')
