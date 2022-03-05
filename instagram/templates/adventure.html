@@ -47,8 +47,8 @@
                 the largest ruminant on Earth.
               </p>
               <a href="#" class="btn btn-success">Comment</a>
-              <a href="#" class="btn btn-primary">Like</a>
-              <a href="#" class="btn btn-danger">Dislike</a>
+              <a href="#" class="btn btn-primary" id="clickme">Like</a>
+              <a href="#" class="btn btn-danger" id="dislike">Dislike</a>
             </div>
           </div>
           <div class="card" id="card1" style="width: 18rem">
@@ -65,8 +65,8 @@
                 streaks, a deep chest, long thin legs.
               </p>
               <a href="#" class="btn btn-success">Comment</a>
-              <a href="#" class="btn btn-primary">Like</a>
-              <a href="#" class="btn btn-danger">Dislike</a>
+              <a href="#" class="btn btn-primary" id="clickme1">Like</a>
+              <a href="#" class="btn btn-danger" id="dislike1">Dislike</a>
             </div>
           </div>
           <div class="card" id="card2" style="width: 18rem">
@@ -82,8 +82,8 @@
                 classified as caniforms, or doglike carnivorans.
               </p>
               <a href="#" class="btn btn-success">Comment</a>
-              <a href="#" class="btn btn-primary">Like</a>
-              <a href="#" class="btn btn-danger">Dislike</a>
+              <a href="#" class="btn btn-primary" id="clickme2">Like</a>
+              <a href="#" class="btn btn-danger" id="dislike2">Dislike</a>
             </div>
           </div>
         </div>
@@ -92,6 +92,49 @@
   </body>
 </html>
 
+<script>
+  var button = document.getElementById("clickme"),
+    count = 0;
+  button.onclick = function () {
+    count++;
+    button.innerHTML = "Like: " + count;
+  };
+
+  var button1 = document.getElementById("clickme1"),
+    count1 = 0;
+  button1.onclick = function () {
+    count1++;
+    button1.innerHTML = "Like: " + count1;
+  };
+
+  var button2 = document.getElementById("clickme2"),
+    count2 = 0;
+  button2.onclick = function () {
+    count2++;
+    button2.innerHTML = "Like: " + count2;
+  };
+
+  var dislike = document.getElementById("dislike"),
+    counter = 0;
+  dislike.onclick = function () {
+    counter += 1;
+    dislike.innerHTML = "Dislike: " + counter;
+  };
+
+  var dislike1 = document.getElementById("dislike1"),
+    counter1 = 0;
+  dislike1.onclick = function () {
+    counter1 += 1;
+    dislike1.innerHTML = "Dislike: " + counter1;
+  };
+
+  var dislike2 = document.getElementById("dislike2"),
+    counter2 = 0;
+  dislike2.onclick = function () {
+    counter2 += 1;
+    dislike2.innerHTML = "Dislike: " + counter2;
+  };
+</script>
 <style>
   #card1 {
     margin-left: 130%;
