@@ -13,5 +13,6 @@ urlpatterns = [
     path('login', views.login_view, name='login'),
     path('ocean', views.ocean, name='ocean'),
     path('send_mail/', send_gmail, name="send_mail"),
+    path('welcome', views.welcome, name='welcome')
 
 ]

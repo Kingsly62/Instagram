@@ -31,6 +31,10 @@ def home(request):
     return render(request, 'home.html')
 
 
+def welcome(request):
+    return render(request, 'welcome.html')
+
+
 @login_required
 def contact(request):
 
@@ -54,7 +58,7 @@ def register_view(request):
         login(request, new_user)
         if next:
             return redirect(next)
-        return redirect('adventure')
+        return redirect('welcome')
 
     context = {
         'form': form,
