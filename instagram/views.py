@@ -93,6 +93,7 @@ def send_gmail(request):
         print(name, subject, message)
 
         send_mail(
+
             subject,
             message,
             'from@mail.com',

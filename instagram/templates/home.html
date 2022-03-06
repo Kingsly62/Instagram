@@ -124,7 +124,12 @@
         </div>
 
         <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form
+            action="{% url 'send_mail'%}"
+            class="form-container"
+            method="POST"
+          >
+            {% csrf_token %}
             <p>Subcribe below For Daily Updates</p>
 
             <label for="email"><b>Email</b></label>
@@ -143,24 +148,24 @@
               required
             />
 
-            <label for="psw"><b>Last Name</b></label>
+            <label for="lastname"><b>Last Name</b></label>
             <input
               type="text"
-              placeholder="Enter First-name"
-              name="firstname"
+              placeholder="Enter Last-name"
+              name="lastname"
               required
             />
 
-            <label for="psw"><b>Location</b></label>
+            <label for="location"><b>Location</b></label>
             <input
               type="text"
               placeholder="Location.."
-              name="Location"
+              name="location"
               required
             />
             <button type="submit" class="btn">Subcribe</button>
             <button type="button" class="btn cancel" onclick="closeForm()">
-              Close Form
+              Close
             </button>
           </form>
         </div>
