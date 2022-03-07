@@ -20,7 +20,7 @@
       <h1>Nature Adventures</h1>
       <nav>
         <ul>
-          <li><a href="{% url 'ocean'%}">Oceans</a></li>
+          <li><a href="">Oceans</a></li>
           <li><a href="#section2">Wild Animals</a></li>
           <li style="margin-left: 60%">
             <a href="">Welcome {{user.username}}</a>
@@ -157,6 +157,44 @@
         </div>
       </div>
     </div>
+
+    <div class="footer">
+      <h2>Oceans</h2>
+      <div class="CARD1">
+        <div class="containers">
+          <img
+            src="https://img.freepik.com/free-photo/sunrise_74190-169.jpg?w=900"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <div class="text">Red Sea</div>
+          </div>
+        </div>
+
+        <div class="containers1">
+          <img
+            src="https://img.freepik.com/free-photo/salty-shore-dead-sea-salt-covered-stones_416511-2548.jpg?w=900"
+            alt="Avatar"
+            class="image1"
+          />
+          <div class="overlay1">
+            <div class="text1">Dead Sea</div>
+          </div>
+        </div>
+
+        <div class="containers2">
+          <img
+            src="https://img.freepik.com/free-photo/maldives-island_74190-479.jpg?w=900"
+            alt="Avatar"
+            class="image2"
+          />
+          <div class="overlay2">
+            <div class="text2">Indian Ocean</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -204,6 +242,11 @@
   };
 </script>
 <style>
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+
   #card1 {
     margin-left: 130%;
     position: absolute;
@@ -240,7 +283,7 @@
 
   nav {
     background: red;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 12%;
     border-radius: 10px;
@@ -253,5 +296,146 @@
 
   ul li a {
     text-decoration: none;
+  }
+
+  .containers {
+    position: relative;
+    width: 50%;
+  }
+
+  .image {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008cba;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .containers:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .containers1 {
+    position: relative;
+    width: 50%;
+    margin-left: 35%;
+    bottom: -36%;
+    position: absolute;
+  }
+
+  .image1 {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
+
+  .overlay1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008cba;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .containers1:hover .overlay1 {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .text1 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .containers2 {
+    position: relative;
+    width: 50%;
+    margin-left: 70%;
+    bottom: -36%;
+    position: absolute;
+  }
+
+  .image2 {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
+
+  .overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008cba;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .containers2:hover .overlay2 {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .text2 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 </style>
