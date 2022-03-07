@@ -37,8 +37,7 @@ def welcome(request):
 
 @login_required
 def contact(request):
-
-    return render(request, ' contact.html')
+    return render(request,  'contact.html')
 
 
 @login_required
@@ -91,20 +90,21 @@ def ocean(request):
 
 def send_gmail(request):
     if request.method == "POST":
-        name = request.POST.get('name')
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
         subject = request.POST.get('subject')
-        message = request.POST.get('message')
-        print(name, subject, message)
+        print(firstname, lastname, email, subject)
 
         send_mail(
 
+            email,
             subject,
-            message,
             'from@mail.com',
             ['to@mail.com'],
             fail_silently=False,
         )
 
-        return HttpResponseRedirect(reverse('ocean'))
+        return HttpResponseRedirect(reverse('contact'))
     else:
         return HttpResponse('Invalid request')

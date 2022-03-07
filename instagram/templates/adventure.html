@@ -46,9 +46,33 @@
                 genus Giraffa. It is the tallest living terrestrial animal and
                 the largest ruminant on Earth.
               </p>
-              <a href="#" class="btn btn-success">Comment</a>
+              <a
+                href="#"
+                onclick="document.getElementById('id01').style.display='block'"
+                class="btn btn-success"
+                >Comment</a
+              >
               <a href="#" class="btn btn-primary" id="clickme">Like</a>
               <a href="#" class="btn btn-danger" id="dislike">Dislike</a>
+
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="w3-button w3-display-topright"
+                      style="coursor: pointer"
+                      >&times;</span
+                    >
+                    <textarea
+                      cols="23"
+                      row="4"
+                      placeholder="write your comment"
+                    ></textarea>
+                    <button>Send</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card" id="card1" style="width: 18rem">
@@ -64,9 +88,31 @@
                 small rounded head, a short snout, black tear-like facial
                 streaks, a deep chest, long thin legs.
               </p>
-              <a href="#" class="btn btn-success">Comment</a>
+              <a
+                href="#"
+                onclick="document.getElementById('id02').style.display='block'"
+                class="btn btn-success"
+                >Comment</a
+              >
               <a href="#" class="btn btn-primary" id="clickme1">Like</a>
               <a href="#" class="btn btn-danger" id="dislike1">Dislike</a>
+              <div id="id02" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span
+                      onclick="document.getElementById('id02').style.display='none'"
+                      class="w3-button w3-display-topright"
+                      >&times;</span
+                    >
+                    <textarea
+                      cols="23"
+                      row="4"
+                      placeholder="write your comment"
+                    ></textarea>
+                    <button>Send</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card" id="card2" style="width: 18rem">
@@ -81,9 +127,31 @@
                 Bears are carnivoran mammals of the family Ursidae. They are
                 classified as caniforms, or doglike carnivorans.
               </p>
-              <a href="#" class="btn btn-success">Comment</a>
+              <a
+                href="#"
+                onclick="document.getElementById('id03').style.display='block'"
+                class="btn btn-success"
+                >Comment</a
+              >
               <a href="#" class="btn btn-primary" id="clickme2">Like</a>
               <a href="#" class="btn btn-danger" id="dislike2">Dislike</a>
+              <div id="id03" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span
+                      onclick="document.getElementById('id03').style.display='none'"
+                      class="w3-button w3-display-topright"
+                      >&times;</span
+                    >
+                    <textarea
+                      cols="23"
+                      row="4"
+                      placeholder="write your comment"
+                    ></textarea>
+                    <button>Send</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -140,6 +208,10 @@
     margin-left: 130%;
     position: absolute;
     top: 1%;
+  }
+
+  #id01 {
+    background: grey;
   }
 
   #card2 {
