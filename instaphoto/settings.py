@@ -33,6 +33,7 @@ MODE = config("MODE", default='dev')
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 ALLOWED_HOSTS = ['*']
+DEBUG = os.environ.get('DEBUG', True)
 
 
 # Application definition
@@ -56,7 +57,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -153,3 +153,7 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_PORT = config('EMAIL_PORT')
+
+
+# $clinton62M@#$!%$&k
+# @#$!%$clMKk62
