@@ -21,7 +21,7 @@ Get started:https://github.com/Kingsly62/Instagram
 
 ### Heroku live link to my website
 
-[Click](https://github.com/Kingsly62/Instagram)
+[Click]()
 
 ### Test Instances For the Application(app)
 

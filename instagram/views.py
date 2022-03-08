@@ -26,7 +26,7 @@ from django.core.mail import send_mail
 
 # Create your views here.
 
-@login_required
+@login_required(login_url="login")
 def home(request):
     return render(request, 'home.html')
 
@@ -35,12 +35,12 @@ def welcome(request):
     return render(request, 'welcome.html')
 
 
-@login_required
+@login_required(login_url="login")
 def contact(request):
     return render(request,  'contact.html')
 
 
-@login_required
+@login_required(login_url="login")
 def adventure(request):
     return render(request, 'adventure.html')
 
@@ -83,7 +83,7 @@ def login_view(request):
     return render(request, "login.html", context)
 
 
-@login_required
+@login_required(login_url='login')
 def ocean(request):
     return render(request, 'ocean.html')
 
