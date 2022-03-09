@@ -36,14 +36,14 @@
           type="button"
           class="btn btn-primary position-relative"
           onclick="openForm()"
-        >
-          Profile
+        ><a href="{% url 'login'%}">
+          
           <span
             class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
           >
             <span class="visually-hidden">New alerts</span>
           </span>
-        </button>
+        <a>Profile</button>
       </div>
 
       <div class="form-popup" id="myForm">
