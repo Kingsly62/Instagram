@@ -14,17 +14,16 @@
   </head>
 
   <body>
-    {% block content %}
     <h1><span class="badge bg-secondary">Sign Up</span></h1>
-
-    <form method="POST">
-      {% csrf_token %} {{form}}
-      <input type="submit" />
-    </form>
-    <button>
-      <a href="{% url 'login'%}">Already have an Account?Login</a>
-    </button>
-    {% endblock %}
+    <div class="card-body">
+      <form method="POST">
+        {% csrf_token %} {{form}}
+        <input class="btn btn-primary" type="submit" value="Register" />
+        <button>
+          <a href="{% url 'login'%}">Already have an Account?Login</a>
+        </button>
+      </form>
+    </div>
   </body>
 </html>
 <style>
