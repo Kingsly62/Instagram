@@ -15,10 +15,10 @@
 
   <body>
     <h1><span class="badge bg-secondary">Sign Up</span></h1>
-    <div class="card-body">
+    <div class="card">
       <form method="POST">
-        {% csrf_token %} {{form}}
-        <input class="btn btn-primary" type="submit" value="Register" />
+        {% csrf_token %} {{form}}<br />
+        <input class="btn btn-primary" type="submit" value="Register" /><br />
         <button>
           <a href="{% url 'login'%}">Already have an Account?Login</a>
         </button>
@@ -29,5 +29,25 @@
 <style>
   h1 {
     text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    color: white;
+    padding-left: 190px;
+    width: 500px;
+    height: 60vh;
+    border-radius: 70px;
+    font-family: "Courgette", cursive;
+    background-color: rgb(37, 26, 37);
+    margin-left: 30%;
+    top: 20%;
+    position: absolute;
+  }
+
+  body {
+    background: url("https://img.freepik.com/free-photo/interior-design-living-room-modern-home-with-armchair-empty-light-white-wall-background-3d-rendering_41470-3960.jpg?w=900");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 </style>
