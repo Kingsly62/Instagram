@@ -26,7 +26,7 @@ Get started:https://github.com/Kingsly62/Instagram
 ### Test Instances For the Application(app)
 
 - $ python3 -m venv virtual
-- $ python3 manage.py test home
+- $ python3 manage.py test instagram
 
 ### SetUp / Installation Requirements
 
